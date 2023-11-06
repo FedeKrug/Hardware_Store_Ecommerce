@@ -1,10 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
+import { HomeScreen, Error404Screen } from '../pages';
 
 
 export const AppRouter = () => {
     return <>
         <Routes>
-
+            <Route path='/' element={<HomeScreen />} />
             {/* <Route path='/' element={<HomePage />} />
             <Route path='/sobre-nosotros' element={<AboutPage />} />
             <Route path='/contacto' element={<ContactPage />} />
@@ -17,11 +18,11 @@ export const AppRouter = () => {
             <Route path='/blog' element={<BlogPage />} />
             <Route path='/galeria' element={<GalleryPage />} />
             <Route path='/preguntas-frecuentes' element={<FAQPage />} />
-            <Route path='/nuestras-causas' element={<FAQPage />} />
+            <Route path='/nuestras-causas' element={<FAQPage />} /> */}
 
 
+            <Route path='/*' element={<Error404Screen />} />
 
-            <Route path='/*' element={<Error404Page />} /> */}
         </Routes>
     </>
 
